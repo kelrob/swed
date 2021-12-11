@@ -18,6 +18,7 @@ $(document).ready(function () {
   $($questions.get(currentQuestion)).fadeIn();
 
   let prevQ;
+  let prevAns;
 
   // On click of next
   $("#next-btn").click(function () {
@@ -28,6 +29,7 @@ $(document).ready(function () {
     let question = $($questions.find("span")[currentQuestion]).text();
     let response = $($questions.find("#response")[currentQuestion]).val();
     prevQ = question;
+    prevAns = response;
 
     // check that all responses are submitted
     if (response === "") {
@@ -52,6 +54,10 @@ $(document).ready(function () {
       // Display the previous button to go back to previous questiom
       currentQuestion >= 0 && $("#prev-btn").show();
 
+      if (currentQuestion + 1 == totalQuestions) {
+        $("#next-btn").text("Submit");
+      }
+
       // if there are no more questions submit
       if (currentQuestion == totalQuestions) {
         $("form").hide();
@@ -64,8 +70,9 @@ $(document).ready(function () {
         $("#loan_type").text(localStorage.getItem("loan_type"));
         $("#summary").append(
           `<div class="action-buttons">
-              <button type="button" onclick="location.href = './index.html'"  id="next-btn">Go back home</button>
-              <button type="button" onclick="location.href = './form.html'"  id="prev-btn">Start Again</button>
+              <button type="button" align="left" onclick="location.href = './index.html'"  id="next-btn">Go back home</button>
+              
+              <button type="button" align="left" onclick="location.href = './form.html'"  id="prev-btn">Start Again</button>
           </div>`
         );
       } else {
@@ -97,7 +104,7 @@ $(document).ready(function () {
       // Get the current question count
       currentQuestion -= 1;
 
-      if (prevQ == "Have You collected a loan before?") {
+      if (prevQ == "Have You collected a loan before?" && prevAns == "no") {
         currentQuestion -= 1;
       }
 

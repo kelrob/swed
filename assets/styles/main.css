@@ -529,4 +529,12 @@ select {
   #prev-btn {
     padding: 10px 40px;
   }
+
+  #summary {
+    padding: 3% 5%;
+  }
+
+  .action-buttons button {
+    width: 100%;
+  }
 }
