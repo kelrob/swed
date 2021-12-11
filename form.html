@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://www.swedbank.lt/stylebook/touch/images/apple-touch-icon.png" rel="icon" type="image/png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <!-- Main css file -->
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+
+    <title>Swedbank Assesment :: Loan</title>
+
+    <!-- Font Awesome --->
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+        integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+        crossorigin="anonymous"></script>
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!--===== Gradient Start =====-->
+        <div class="header-gradient"></div>
+        <!--===== /Gradient End =====-->
+
+        <!--===== Navbar Start =====-->
+        <div class="navbar">
+            <div class="navbar-header">
+                <div class="logo">
+                    <img src="https://www.swedbank.lt/webjars/webcomponents/2.2.5/assets/images/swedbank-logo.svg" />
+                </div>
+                <div class="greeting">
+                    <h4>Hello User!</h4>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="navbar-menu">
+                <div class="menu-list">
+                    <ul>
+                        <span class="icon"><a href="javascript:void(0);" class="icon" onclick="expandMenu()">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </span>
+                        <span class="home-icon"><a href="./index.html"><i class="fas fa-home"></i></a></span>
+                        <li class="menu"><a href="#">Everyday Banking</a></li>
+                        <li class="menu"><a href="#">Cards</a></li>
+                        <li class="menu"><a href="./index.html" id="menu-active">Loan, leasing</a></li>
+                        <li class="menu"><a href="#">Savings, Investments</a></li>
+                        <li class="menu"><a href="#">Pension</a></li>
+                        <li class="menu"><a href="#">Insurance</a></li>
+                        <span class="search-icon"><a href="#"><i class="fas fa-search"></i></a></span>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--===== /Navbar End =====-->
+
+        <div class="container">
+            <!--=====  Form Section Start =====-->
+            <div class="form">
+                <form autocomplete="on" id="form">
+                    <div id="questions">
+                        <span id="error-message"></span>
+                        <div class="question">
+                            <label><b id="question-count"></b> <span>Please enter your Full Name</span></label>
+                            <input type="text" id="response" />
+                        </div>
+
+                        <div class="question">
+                            <label><b id="question-count"></b> <span>Please enter your Occupation</span></label>
+                            <input type="text" id="response" />
+                        </div>
+
+                        <div class="question">
+                            <label><b id="question-count"></b> <span>Please enter your Home Address</span></label>
+                            <input type="text" id="response" />
+                        </div>
+
+                        <div class="question">
+                            <label><b id="question-count"></b> <span>Have You collected a loan before?</span></label>
+                            <select id="response">
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+
+                        <div class="question conditional">
+                            <label><b id="question-count"></b> <span> Who did you get the loan from? </span></label>
+                            <input type="text" id="response" />
+                        </div>
+
+                        <div class="question">
+                            <label><b id="question-count"></b> <span>What's your monthly salary? </span></label>
+                            <input type="number" id="response" min="1" />
+                        </div>
+
+                        <div class="question">
+                            <label><b id="question-count"></b> <span>How much loan are you looking for?</span></label>
+                            <input type="number" id="response" id="response" min="1" />
+                        </div>
+
+                        <div class="question">
+                            <label><b id="question-count"></b> <span>Duration Period <small>In
+                                        Months</small></span></label>
+                            <input type="number" id="response" min="1" max="36" id="response" />
+                        </div>
+
+                        <div class="action-buttons">
+                            <button type="button" id="next-btn">Next</button>
+                            <button type="button" id="prev-btn">Previous</button>
+                        </div>
+                    </div>
+                </form>
+
+                <div id="summary">
+                    <h2 id="text-center">Summary</h2>
+
+                    <h3 id="loan-type-h3">Loan Type</h3>
+                    <p id="loan_type"></p>
+                </div>
+
+
+            </div>
+            <!--===== /Form Section End =====-->
+
+
+        </div>
+
+        <!--===== Footer Start =====-->
+        <footer>
+            <p>&copy; <span>Robert Ebafua</span> Assesment Test </p>
+        </footer>
+        <!--===== /Footer End =====-->
+
+        <!--===== Gradient Start =====-->
+        <div class="header-gradient"></div>
+        <!--===== /Gradient End =====-->
+
+    </div>
+
+    <!-- Extra Scripts -->
+    <script type="text/javascript" src="./assets/js/index.js"></script>
+    <script type="text/javascript" src="./assets/js/questions.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://www.swedbank.lt/stylebook/touch/images/apple-touch-icon.png" rel="icon" type="image/png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <!-- Main css file -->
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+
+    <title>Swedbank Assesment :: Loan</title>
+
+    <!-- Font Awesome --->
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+        integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+        crossorigin="anonymous"></script>
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!--===== Gradient Start =====-->
+        <div class="header-gradient"></div>
+        <!--===== /Gradient End =====-->
+
+        <!--===== Navbar Start =====-->
+        <div class="navbar">
+            <div class="navbar-header">
+                <div class="logo">
+                    <img src="https://www.swedbank.lt/webjars/webcomponents/2.2.5/assets/images/swedbank-logo.svg" />
+                </div>
+                <div class="greeting">
+                    <h4>Hello User!</h4>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="navbar-menu">
+                <div class="menu-list">
+                    <ul>
+                        <span class="icon"><a href="javascript:void(0);" class="icon" onclick="expandMenu()">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </span>
+                        <span class="home-icon"><a href="./index.html"><i class="fas fa-home"></i></a></span>
+                        <li class="menu"><a href="#">Everyday Banking</a></li>
+                        <li class="menu"><a href="#">Cards</a></li>
+                        <li class="menu"><a href="#" id="menu-active">Loan, leasing</a></li>
+                        <li class="menu"><a href="#">Savings, Investments</a></li>
+                        <li class="menu"><a href="#">Pension</a></li>
+                        <li class="menu"><a href="#">Insurance</a></li>
+                        <span class="search-icon"><a href="#"><i class="fas fa-search"></i></a></span>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--===== /Navbar End =====-->
+
+        <div class="container">
+            <!--=====  Summary Section Start =====-->
+            <section class="summary">
+                <div class="summary-content">
+                    <div class="primary-header">
+                        <h3>Loans</h3>
+                    </div>
+
+                    <div class="secondary-header">
+                        <h1>Select Preferred Loan Plan</h1>
+                    </div>
+
+                    <div class="summary-info">
+                        <p>
+                            Whether you are looking to renovate your home, buy a new car or
+                            you need a quick fix in an emergency, there’s a Swedbank loan
+                            for you.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="summary-action">
+                    <a href="form.html" id="primary-btn">Get Started</a>
+                </div>
+            </section>
+            <!--===== /Summary Section End =====-->
+
+            <!--===== Plans Section Start =====-->
+            <section class="loans">
+                <div class="tabs">
+                    <ul>
+                        <li onclick="showTabInfo(event, 'consumer-loan')" id="tabs-active">
+                            Consumer Loan
+                        </li>
+                        <li onclick="showTabInfo(event, 'home-small-loan')">
+                            Home Small Loan
+                        </li>
+                        <li onclick="showTabInfo(event, 'mortgage-loan')">
+                            Mortgage Loan
+                        </li>
+                        <li onclick="showTabInfo(event, 'home-energy-loan')">
+                            Home Energy Efficiency Loan
+                        </li>
+                        <li onclick="showTabInfo(event, 'solar-panel-loan')">
+                            Loan for solar panels
+                        </li>
+                        <li onclick="showTabInfo(event, 'student-loan')">
+                            Students Loan
+                        </li>
+                        <li onclick="showTabInfo(event, 'credit-line-loan')">
+                            Credit Line
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tab-content">
+                    <button class="accordion">Consumer Loans</span></button>
+                    <!-- Consumer Loans -->
+                    <div id="consumer-loan" class="tab-contnet-info panel">
+                        <div class="tab-write-up">
+                            <h3>
+                                Consumer Loans
+                            </h3>
+                            <h2>Loans that help</h2>
+                            <p class="tc-summary">
+                                A small loan is a great solution if you need to renovate your
+                                home, buy new furniture for the terrace, repair your car or to
+                                finance your next big thing.
+                            </p>
+
+                            <div>
+                                <p id="bullet-point">
+                                    <i class="fas fa-caret-right bg-primary"></i>Borrow from 500
+                                    up to 20 000 € without collateral.
+                                </p>
+                                <p id="bullet-point">
+                                    <i class="fas fa-caret-right bg-primary"></i>Annual interest
+                                    rate from 11,9 percent.
+                                </p>
+                                <p id="bullet-point">
+                                    <i class="fas fa-caret-right bg-primary"></i>Money is
+                                    transferred to the account immediately after the conclusion
+                                    of the contract.
+                                </p>
+                                <p id="bullet-point">
+                                    <i class="fas fa-caret-right bg-primary"></i>It is possible
+                                    to make early repayments without any additional fees.
+                                </p>
+                            </div>
+
+                            <p id="get-started-btn">
+                                <a href="form.html" id="primary-btn"
+                                    onclick="localStorage.setItem('loan_type', 'Consumer Loans')">Get Started</a>
+                            </p>
+                        </div>
+                        <div class="tab-img">
+                            <img src="https://www.swedbank.lt/img/introduction/826x1000_small_loan.jpg" />
+                        </div>
+                    </div>
+
+                    <!-- Home Small Loans -->
+                    <button class="accordion">Home small Loans</span></button>
+                    <div id="home-small-loan" class="tab-contnet-info panel display-none">
+                        <div class="tab-write-up">
+                            <h3>
+                                Home Small Loans
+                            </h3>
+                            <h2>A new home or refurbishment – now it’s a breeze!</h2>
+
+                            <p class="tc-summary">
+                                A simple solution if you’re looking to buy a property or
+                                undertake your home renovation.
+                            </p>
+
+                            <div>
+                                <p id="bullet-point">
+                                    <i class="fas fa-caret-right bg-primary"></i>Loan amount 5
+                                    000-20 000 EUR.
+                                </p>
+                                <p id="bullet-point">
+                                    <i class="fas fa-caret-right bg-primary"></i>Annual interest
+                                    rate from 7,9 percent.
+                                </p>
+                                <p id="bullet-point">
+                                    <i class="fas fa-caret-right bg-primary"></i>Money is
+                                    transferred No mortgage placed on real estate.
+                                </p>
+                                <p id="bullet-point">
+                                    <i class="fas fa-caret-right bg-primary"></i>No down payment
+                                    required.
+                                </p>
+                            </div>
+
+                            <p id="get-started-btn">
+                                <a href="form.html" onclick="localStorage.setItem('loan_type', 'Home Small Loans')"
+                                    id="primary-btn">Get Started</a>
+                            </p>
+                        </div>
+                        <div class="tab-img">
+                            <img
+                                src="https://www.swedbank.lt/img/private/credit/loans/home/826x1000_Home_small_loan.jpg" />
+                        </div>
+                    </div>
+
+                    <!-- Mortagage Loan -->
+                    <button class="accordion">Mortgage Loans</span></button>
+                    <div id="mortgage-loan" class="tab-contnet-info panel display-none">
+                        <div class="tab-write-up">
+                            <h3>Mortgage loan</h3>
+                            <h2>There’s no place like home!</h2>
+                            <p class="tc-summary">
+                                Home loan will be a perfect solution if you need a loan for a
+                                new home, serious renovation or construction.
+                            </p>
+
+                            <div>
+                                <p id="bullet-point">
+                                    <i class="fas fa-caret-right bg-primary"></i>Fast
+                                    application processing
+                                </p>
+                                <p id="bullet-point">
+                                    <i class="fas fa-caret-right bg-primary"></i>Opportunity to
+                                    pay back earlier and manage your contract via Internet
+                                    Banking
+                                </p>
+                                <p id="bullet-point">
+                                    <i class="fas fa-caret-right bg-primary"></i>We constantly
+                                    offer discounts for home loans, when you receive the
+                                    discount code from the seller and, please, do not forget to
+                                    submit it completing the application for the home loan in
+                                    the Internet Bank.
+                                </p>
+                            </div>
+
+                            <p id="get-started-btn">
+                                <a href="form.html" onclick="localStorage.setItem('loan_type', 'Mortgage Loans')"
+                                    id="primary-btn">Get Started</a>
+                            </p>
+                        </div>
+                        <div class="tab-img">
+                            <img
+                                src="https://www.swedbank.lt/img/private/credit/loans/home/campaign/826x1000_Home_loan_kid.jpg" />
+                        </div>
+                    </div>
+
+                    <!-- Home Energy Loan -->
+                    <button class="accordion">Home Energy Efficiency Loans</span></button>
+                    <div id="home-energy-loan" class="tab-contnet-info panel display-none">
+                        <div class="tab-write-up">
+                            <h3>
+                                Home Energy Efficiency Loan
+                            </h3>
+                            <h2>Improve the energy efficiency of your house</h2>
+                            <p class="tc-summary">
+                                New solution on making improvements to your house! Take a
+                                sustainable step for the benefit of all – choose
+                                energy-efficient solutions (like insulating your home,
+                                installing a modern heating or ventilation system, replacing
+                                windows or doors), and we'll make the loan terms very
+                                attractive to help you realize your plans:
+                            </p>
+
+                            <div>
+                                <p id="bullet-point">
+                                    <i class="fas fa-caret-right bg-primary"></i>Special
+                                    interest rate, starting from 1.99% + 6-month EURIBOR*,
+                                </p>
+                                <p id="bullet-point">
+                                    <i class="fas fa-caret-right bg-primary"></i>Loan amount
+                                    from 20,000 EUR,
+                                </p>
+                                <p id="bullet-point">
+                                    <i class="fas fa-caret-right bg-primary"></i>Remote process
+                                    for loan consultation and granting.
+                                </p>
+                            </div>
+
+                            <p id="get-started-btn">
+                                <a href="form.html" id="primary-btn"
+                                    onclick="localStorage.setItem('loan_type', 'Home Energy Efficiency Loans')">Get
+                                    Started</a>
+                            </p>
+                        </div>
+                        <div class="tab-img">
+                            <img
+                                src="https://www.swedbank.lt/img/private/credit/loans/home/826x1000_homeEnergyEfficiencyLoan.jpg" />
+                        </div>
+                    </div>
+
+                    <!-- Solar Panel Loan -->
+                    <button class="accordion">Loan for solar panels</span></button>
+                    <div id="solar-panel-loan" class="tab-contnet-info panel display-none">
+                        <div class="tab-write-up">
+                            <h3>
+                                Loan for solar panels
+                            </h3>
+                            <h2>Let the sun lower your energy costs!</h2>
+                            <p class="tc-summary">
+                                Now you can apply for a special consumer loan and take the
+                                green step to benefit everyone by installing your own solar
+                                power plant.
+                            </p>
+
+                            <div>
+                                <p id="bullet-point">
+                                    <i class="fas fa-caret-right bg-primary"></i>The loan is for
+                                    the installation of a solar power plant or the purchase of a
+                                    remote part of a solar power plant.
+                                </p>
+                                <p id="bullet-point">
+                                    <i class="fas fa-caret-right bg-primary"></i>Fixed interest
+                                    rate of 4,9%.
+                                </p>
+                                <p id="bullet-point">
+                                    <i class="fas fa-caret-right bg-primary"></i>Using renewable
+                                    energy sources is not only more cost effective, but also
+                                    contributes to a more sustainable future of our planet.
+                                </p>
+                                <p id="bullet-point">
+                                    <i class="fas fa-caret-right bg-primary"></i>If you‘ve got
+                                    Swedbank Home Insurance, your solar panels will be also
+                                    protected by it.
+                                </p>
+                            </div>
+
+                            <p id="get-started-btn">
+                                <a href="form.html" id="primary-btn"
+                                    onclick="localStorage.setItem('loan_type', 'Loan for Solar Panels')">Get Started</a>
+                            </p>
+                        </div>
+                        <div class="tab-img">
+                            <img src="https://www.swedbank.lt/img/private/credit/loans/solar/826x1000_Solar_loan.jpg" />
+                        </div>
+                    </div>
+
+                    <!-- Student Loan -->
+                    <button class="accordion">Student Loans</span></button>
+                    <div id="student-loan" class="tab-contnet-info panel display-none">
+                        <div class="tab-write-up">
+                            <h3>
+                                Students loans
+                            </h3>
+                            <h2>State-supported student loans</h2>
+                            <p class="tc-summary">
+                                An opportunity to borrow for tuition, living expenses or
+                                partial studies abroad.
+                            </p>
+
+                            <div>
+                                <p id="bullet-point">
+                                    <i class="fas fa-caret-right bg-primary"></i>The loan or
+                                    part of it is paid out on the day the agreement is signed.
+                                </p>
+                                <p id="bullet-point">
+                                    <i class="fas fa-caret-right bg-primary"></i>No agreement
+                                    conclusion or administration fees apply.
+                                </p>
+                                <p id="bullet-point">
+                                    <i class="fas fa-caret-right bg-primary"></i>For loans for
+                                    living expenses, we don’t require you to submit a separate
+                                    request each month to pay out the credit – part of the
+                                    credit is automatically paid to your account each month.
+                                </p>
+                            </div>
+
+                            <p id="get-started-btn">
+                                <a href="form.html" id="primary-btn"
+                                    onclick="localStorage.setItem('loan_type', 'Student Loans')">Get Started</a>
+                            </p>
+                        </div>
+                        <div class="tab-img">
+                            <img src="https://www.swedbank.lt/img/private/credit/study/intro.jpg" />
+                        </div>
+                    </div>
+
+                    <!-- Credit Line Loan -->
+                    <button class="accordion">Credit Line Loans</span></button>
+                    <div id="credit-line-loan" class="tab-contnet-info panel display-none">
+                        <div class="tab-write-up">
+                            <h3>Credit line</h3>
+                            <h2>State-supported student loans</h2>
+
+                            <div>
+                                <p id="bullet-point">
+                                    <i class="fas fa-caret-right bg-primary"></i>We recommend if
+                                    you plan to use the money in instalments or do not know the
+                                    exact amount of the final cost (e. g., for home repair);
+                                </p>
+                                <p id="bullet-point">
+                                    <i class="fas fa-caret-right bg-primary"></i>You can submit
+                                    your credit line application via internet bank;
+                                </p>
+                                <p id="bullet-point">
+                                    <i class="fas fa-caret-right bg-primary"></i>Agreement
+                                    conclusion fee applied on internet bank is smaller than
+                                    conclusion fee that is applied in bank branch.
+                                </p>
+                            </div>
+
+                            <p id="get-started-btn">
+                                <a href="form.html" id="primary-btn"
+                                    onclick="localStorage.setItem('loan_type', 'Credit Line Loans')">Get Started</a>
+                            </p>
+                        </div>
+                        <div class="tab-img">
+                            <img src="https://www.swedbank.lt/img/private/credit/loans/pcl.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--===== Plans Section End =====-->
+        </div>
+
+        <!--===== Footer Start =====-->
+        <footer>
+            <p>&copy; <span>Robert Ebafua</span> Assesment Test</p>
+        </footer>
+        <!--===== /Footer End =====-->
+
+        <!--===== Gradient Start =====-->
+        <div class="header-gradient"></div>
+        <!--===== /Gradient End =====-->
+    </div>
+
+    <!-- Extra Scripts -->
+    <script type="text/javascript" src="./assets/js/index.js"></script>
+</body>
+
+</html>
